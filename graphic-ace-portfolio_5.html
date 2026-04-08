@@ -638,7 +638,7 @@ footer{background:var(--ink);padding:24px 5vw;display:flex;justify-content:space
 </footer>
 
 <script>
-(function(){emailjs.init({publicKey:"YOUR_EMAILJS_PUBLIC_KEY"});})();
+(function(){emailjs.init({publicKey:"4Au2J8YWgT9oxG84n"});})();
 
 function sendEmail(e){
   e.preventDefault();
@@ -646,7 +646,7 @@ function sendEmail(e){
   var txt=document.getElementById("subTxt");
   var st=document.getElementById("fStatus");
   btn.disabled=true; txt.textContent="Sending…"; st.className="f-status"; st.style.display="none";
-  emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
+  emailjs.send("service_16jgc9u","template_hzkda8a",{
     from_name:document.getElementById("fn").value,
     from_email:document.getElementById("fe").value,
     service:document.getElementById("fs").value,
