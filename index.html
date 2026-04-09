@@ -538,33 +538,6 @@ footer{background:var(--ink);padding:24px 5vw;display:flex;justify-content:space
         <div><div class="t-name">Funmi Kazeem</div><div class="t-role">Creative Director, Pulse Media</div><div class="t-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div></div>
       </div>
     </div>
-    <div class="test-card reveal d1">
-      <div class="t-quote-mark">&ldquo;</div>
-      <p class="t-quote">Beautiful, Well done.</p>
-      <div class="t-line"></div>
-      <div class="t-author">
-        <div class="t-avatar" style="background:var(--coral);color:#fff;">DA</div>
-        <div><div class="t-name">Dr. Adetoyinbo</div><div class="t-role">Healthcare Professional</div><div class="t-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div></div>
-      </div>
-    </div>
-    <div class="test-card reveal d2">
-      <div class="t-quote-mark">&ldquo;</div>
-      <p class="t-quote">Beautiful by the way, as always. Well done.</p>
-      <div class="t-line"></div>
-      <div class="t-author">
-        <div class="t-avatar" style="background:var(--blue-dark);color:#fff;">DA</div>
-        <div><div class="t-name">Dr. Anuforo</div><div class="t-role">Medical Professional</div><div class="t-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div></div>
-      </div>
-    </div>
-    <div class="test-card reveal d3">
-      <div class="t-quote-mark">&ldquo;</div>
-      <p class="t-quote">Powerful, Well done.</p>
-      <div class="t-line"></div>
-      <div class="t-author">
-        <div class="t-avatar" style="background:var(--navy);color:var(--cream);">DJ</div>
-        <div><div class="t-name">Dr. Jesunbo</div><div class="t-role">Healthcare Specialist</div><div class="t-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -579,7 +552,7 @@ footer{background:var(--ink);padding:24px 5vw;display:flex;justify-content:space
       <div class="c-info-list">
         <div class="c-info-row">
           <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
-          <div><div class="i-label">Email</div><div class="i-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2669474f4e4f4b4f54434c49434a66414b474f4a0845494b">[email&#160;protected]</a></div></div>
+          <div><div class="i-label">Email</div><div class="i-value">Oaihimirejoel@gmail.com</div></div>
         </div>
         <div class="c-info-row">
           <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
@@ -664,7 +637,7 @@ footer{background:var(--ink);padding:24px 5vw;display:flex;justify-content:space
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){emailjs.init({publicKey:"4Au2J8YWgT9oxG84n"});})();
 
 function sendEmail(e){
@@ -706,4 +679,13 @@ window.addEventListener("scroll",function(){
   secs.forEach(function(id){
     var el=document.getElementById(id);
     if(!el)return;
-    var link=document.querySelector('.n
+    var link=document.querySelector('.nav-links a[href="#'+id+'"]');
+    if(link){
+      if(el.offsetTop<=y&&el.offsetTop+el.offsetHeight>y){link.classList.add("active");}
+      else{link.classList.remove("active");}
+    }
+  });
+},{passive:true});
+</script>
+</body>
+</html>
